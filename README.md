@@ -7,12 +7,7 @@
 ## You are using a wonderful template which I think I got the secrets of the template, and I would like to share this with jsers !
 
 ### // example for the usage of ccTpl
-### <script id="tpl-html" type="text/html">
-### 	<!-- the keyword: "it" should not be omitted !-->
-### 	{{ for (var i = 0, len = it.data.list.length; i < len; i++) {}}
-### 	<p>{{- it.data.list[i].text }}</p>
-### 	{{ } }
-### </script>
+### // the keyword: "it" should not be omitted in the template !
 ### var nodeTpl = document.getElementById('tpl-html');
 ### var html = nodeTpl.innerHTML;
 ### var template = ccTpl(html);
