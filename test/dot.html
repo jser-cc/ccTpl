@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<script id="tpl-dot-test" type="text/html">
+		{{ for (var i = 0, len = it.data.length; i < len; i++) { }}
+		<p> {{= it.data.text }} </p>
+		{{ } }}
+	</script>
+
+	<script src="./js/jquery.js"></script>
+	<script src="./js/doT.js"></script>
+	<script>
+		var data = {
+			length: 100000,
+			text: 'hello world !'
+		};
+
+		var tplDoT = doT.compile($('#tpl-dot-test').html());
+		var theme2 = 'template: [doT]: iterate:' + data.length + ' times';
+
+		console.time(theme2);
+		var str2 = tplDoT({ data: data });
+		console.timeEnd(theme2);
+
+	</script>
+</body>
+</html>

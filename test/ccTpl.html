@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script id="tpl-tpl-test" type="text/html">
+		{{ for (var i = 0, len = it.data.length; i < len; i++) { }}
+		<p> {{- it.data.text }} </p>
+		{{ } }}
+	</script>
+
+	<script src="./js/jquery.js"></script>
+	<script src="../dist/ccTpl.js"></script>
+	<script>
+		var data = {
+			length: 100000,
+			text: 'hello world !'
+		};
+
+		var tplTpl = ccTpl($('#tpl-tpl-test').html());
+		var theme1 = 'template: [ccTpl]: iterate:' + data.length + ' times';
+
+		console.time(theme1);
+		var str1 = tplTpl({ data: data });
+		console.timeEnd(theme1);
+
+	</script>
+</body>
+</html>
