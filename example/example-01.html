@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>example-01</title>
+</head>
+<body>
+	<div id="out"></div>
+	<script id="tpl-html" type="text/html">
+		{{ for (var i = 0, len = it.list.length; i < len; i++) { }}
+		<h1>{{= it.list[i].text}}</h1>
+		{{ } }}
+	</script>
+	<script src="../dist/ccTpl.js"></script>
+	<script>
+		var nodeTpl = document.getElementById('tpl-html');
+		var htmlTpl = nodeTpl.textContent;
+		var tpl = ccTpl(htmlTpl);
+		var data = {
+			list: [
+				{ text: 'hello world !' },
+				{ text: 'this is cc\'s javascript !' },
+				{ text: 'any idea for building it better is welcome !' }
+			]
+		};
+		var htmlOut = tpl(data);
+		var nodeOut = document.getElementById('out');
+		nodeOut.innerHTML = htmlOut;
+	</script>
+</body>
+</html>
