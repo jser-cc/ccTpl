@@ -1,6 +1,6 @@
 # ccTpl
 
-# The fastest javascript template in the world (as I know) !
+# The fastest javascript template in the world !
 # The simplest javascript template in the world !
 
 ## This is ccTpl !
