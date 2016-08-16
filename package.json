@@ -1,0 +1,19 @@
+{
+  "name": "ccTpl",
+  "version": "0.0.1",
+  "author": "jser-DC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jser-DC/ccTpl.git"
+  },
+  "keywords": [
+    "template",
+    "js template"
+  ],
+  "description": "The fastest javascript template in the world ! The simplest javascript template in the world !",
+  "dependencies": {},
+  "devDependencies": {
+    "jquery": "^2.1.4",
+    "doT": "^1.0.0"
+  }
+}
